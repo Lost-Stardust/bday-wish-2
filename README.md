@@ -1,2 +1,2 @@
-# Template repo  
-A template repo with prettier, webpack, npm and stuff. Made to be used in my personal projects
+# bday wish 2  
+a small project to wish my girl happy birthday
