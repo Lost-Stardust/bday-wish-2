@@ -45,3 +45,8 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+body {
+  overflow: hidden;
+  background-color: black;
+}
