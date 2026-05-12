@@ -48,5 +48,7 @@ h6 {
 
 body {
   overflow: hidden;
+  position: relative;
   background-color: black;
+  padding: 5px;
 }
