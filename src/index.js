@@ -8,7 +8,7 @@ function random(min, max) {
 // Work out number of total pixels on body and then decide what fraction of those should contain stars
 const body = document.querySelector("body");
 const canvasSize = body.offsetWidth * body.offsetHeight;
-const starsFraction = canvasSize / 2000;
+const starsFraction = canvasSize / 4000;
 
 // loop that will add each star at a time
 // The xPos and yPos here will be percentages, hence needing a random number between 0 and 100.
@@ -25,7 +25,7 @@ for (let i = 0; i < starsFraction; i++) {
   // Add each star and use properties above to add styling
 
   const star = document.createElement("div");
-  star.style.position = "relative";
+  star.style.position = "absolute";
   star.style.left = xPos + "%";
   star.style.top = yPos + "%";
   star.style.opacity = alpha;
@@ -34,3 +34,19 @@ for (let i = 0; i < starsFraction; i++) {
   star.style.backgroundColor = color;
   document.body.appendChild(star);
 }
+
+let xPos = random(0, 80);
+let yPos = random(0, 100);
+let alpha = 1;
+
+const heart = document.createElement("div");
+heart.id = "heart";
+heart.style.left = xPos + "%";
+heart.style.top = yPos + "%";
+heart.style.opacity = alpha;
+document.body.appendChild(heart);
+
+console.log(heart);
+console.log(heart.style.backgroundColor);
+console.log(starsFraction);
+console.log(canvasSize);
