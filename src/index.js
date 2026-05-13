@@ -35,6 +35,8 @@ for (let i = 0; i < starsFraction; i++) {
   document.body.appendChild(star);
 }
 
+// Add a heart randomly in the stars
+
 let xPos = random(0, 80);
 let yPos = random(0, 100);
 let alpha = 1;
@@ -50,3 +52,12 @@ console.log(heart);
 console.log(heart.style.backgroundColor);
 console.log(starsFraction);
 console.log(canvasSize);
+
+// Make the heart change position randomly on click
+
+heart.addEventListener("click", () => {
+  let xPos = random(0, 80);
+  let yPos = random(0, 80);
+  heart.style.left = xPos + "%";
+  heart.style.top = yPos + "%";
+});
