@@ -48,16 +48,13 @@ heart.style.top = yPos + "%";
 heart.style.opacity = alpha;
 document.body.appendChild(heart);
 
-console.log(heart);
-console.log(heart.style.backgroundColor);
-console.log(starsFraction);
-console.log(canvasSize);
-
 // Make the heart change position randomly on click
-
+let clickCount = 0;
 heart.addEventListener("click", () => {
   let xPos = random(0, 80);
   let yPos = random(0, 80);
   heart.style.left = xPos + "%";
   heart.style.top = yPos + "%";
+  clickCount++;
+  console.log(clickCount);
 });
