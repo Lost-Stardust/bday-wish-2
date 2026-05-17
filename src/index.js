@@ -57,17 +57,20 @@ document.body.appendChild(heart);
 // Make the heart change position randomly on click
 let clickCount = 0;
 heart.addEventListener("click", () => {
+  if (clickCount == 21) {
+    heart.style.display = "none";
+  }
   let xPos = random(0, 80);
   let yPos = random(0, 80);
   heart.style.left = xPos + "%";
   heart.style.top = yPos + "%";
   clickCount++;
+  console.log(clickCount);
 
   // randomly choose sound effect to play on click
   let max = 5;
   let min = 0;
   let num = Math.floor(Math.random() * (max - min + 1)) + min;
-  console.log(num);
 
   const audio = [shine0, shine1, shine2, shine3, shine4, shine5];
   const sound = new Audio(audio[num]);
