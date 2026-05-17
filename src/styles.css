@@ -83,3 +83,29 @@ body {
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
+.wish {
+  position: absolute;
+  top: 17%;
+  left: 23%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+.wish.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 4s ease-in-out;
+}
+.wish2 {
+  position: absolute;
+  top: 17%;
+  left: 23%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+.wish2.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 4s ease-in-out;
+}
