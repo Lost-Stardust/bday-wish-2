@@ -1,4 +1,10 @@
 import "./styles.css";
+import shine0 from "./assets/shine0.mp3";
+import shine1 from "./assets/shine1.mp3";
+import shine2 from "./assets/shine2.mp3";
+import shine3 from "./assets/shine3.mp3";
+import shine4 from "./assets/shine4.mp3";
+import shine5 from "./assets/shine5.mp3";
 
 // function that gives random number between min and max inclusive
 function random(min, max) {
@@ -56,5 +62,14 @@ heart.addEventListener("click", () => {
   heart.style.left = xPos + "%";
   heart.style.top = yPos + "%";
   clickCount++;
-  console.log(clickCount);
+
+  // randomly choose sound effect to play on click
+  let max = 5;
+  let min = 0;
+  let num = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(num);
+
+  const audio = [shine0, shine1, shine2, shine3, shine4, shine5];
+  const sound = new Audio(audio[num]);
+  sound.play();
 });
