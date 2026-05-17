@@ -6,6 +6,8 @@ import shine3 from "./assets/shine3.mp3";
 import shine4 from "./assets/shine4.mp3";
 import shine5 from "./assets/shine5.mp3";
 
+import wishText2 from "./assets/wishText-2.png";
+
 // function that gives random number between min and max inclusive
 function random(min, max) {
   return min + Math.random() * (max + 1 - min);
@@ -57,8 +59,9 @@ document.body.appendChild(heart);
 // Make the heart change position randomly on click
 let clickCount = 0;
 heart.addEventListener("click", () => {
-  if (clickCount == 21) {
+  if (clickCount == 2) {
     heart.style.display = "none";
+    HB();
   }
   let xPos = random(0, 80);
   let yPos = random(0, 80);
@@ -76,3 +79,13 @@ heart.addEventListener("click", () => {
   const sound = new Audio(audio[num]);
   sound.play();
 });
+
+function HB() {
+  const wish = document.querySelector(".wish");
+  const wish2 = document.querySelector(".wish2");
+  wish.classList.add("active");
+
+  setTimeout(() => {
+    wish2.classList.add("active");
+  }, 5000);
+}
