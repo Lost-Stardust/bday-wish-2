@@ -6,8 +6,6 @@ import shine3 from "./assets/shine3.mp3";
 import shine4 from "./assets/shine4.mp3";
 import shine5 from "./assets/shine5.mp3";
 
-import wishText2 from "./assets/wishText-2.png";
-
 // function that gives random number between min and max inclusive
 function random(min, max) {
   return min + Math.random() * (max + 1 - min);
