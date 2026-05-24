@@ -109,3 +109,200 @@ body {
   visibility: visible;
   transition: all 4s ease-in-out;
 }
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.container.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 4s ease-in-out;
+}
+.container > div {
+  /* border: solid whitesmoke 2px; */
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.container > div > p {
+  background-color: rgb(255, 148, 225);
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.container > div > div {
+  flex: 1;
+}
+.img1 {
+  background: url("./assets/moon1.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img2 {
+  background: url("./assets/moon2.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img3 {
+  background: url("./assets/moon3.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img4 {
+  background: url("./assets/moon4.jpg") no-repeat center center;
+  background-size: 200%;
+  width: 100%;
+  height: 100%;
+}
+.img5 {
+  background: url("./assets/moon5.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img6 {
+  background: url("./assets/moon6.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img7 {
+  background: url("./assets/moon7.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img8 {
+  background: url("./assets/moon8.jpg") no-repeat;
+  background-size: cover;
+  background-position: 35% 25%;
+  width: 100%;
+  height: 100%;
+}
+/* .p1 {
+  transform: rotate(-10deg);
+  transition: all 1s ease-in-out;
+}
+.p1:hover {
+  transform: scale(110%);
+}
+.p1.active {
+  transform: rotateY(180deg);
+  transition: all 1s ease-in-out;
+} */
+.card {
+  transform: rotate(-10deg);
+  perspective: 500px;
+}
+
+.card .content {
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+  border: solid rgb(255, 148, 225) 2px;
+}
+
+.card .front,
+.card .back {
+  grid-area: 1 / 1; /* both occupy the same cell */
+  backface-visibility: hidden;
+}
+
+.card.active .content {
+  transform: rotateY(180deg);
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  background: rgb(255, 148, 225);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .front {
+  position: relative; /* just for the p tag positioning */
+}
+
+.card .front p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background: rgb(255, 148, 225);
+  text-align: center;
+  padding: 8px 0;
+}
+.p1 {
+  transform: rotate(-10deg);
+  transition: all 1s ease-in-out;
+}
+.p1:hover {
+  transform: scale(110%);
+}
+.p2 {
+  transform: rotate(10deg);
+  transition: all 1s ease-in-out;
+}
+.p2:hover {
+  transform: scale(110%);
+}
+.p3 {
+  transform: rotate(2deg);
+  transition: all 1s ease-in-out;
+}
+.p3:hover {
+  transform: scale(110%);
+}
+.p4 {
+  transform: rotate(-5deg);
+  transition: all 1s ease-in-out;
+}
+.p4:hover {
+  transform: scale(110%);
+}
+.p5 {
+  transform: rotate(-8deg);
+  transition: all 1s ease-in-out;
+}
+.p5:hover {
+  transform: scale(110%);
+}
+.p6 {
+  transform: rotate(30deg);
+  transition: all 1s ease-in-out;
+}
+.p6:hover {
+  transform: scale(110%);
+}
+.p7 {
+  transform: rotate(10deg);
+  transition: all 1s ease-in-out;
+}
+.p7:hover {
+  transform: scale(110%);
+}
+.p8 {
+  transform: rotate(-20deg);
+  transition: all 1s ease-in-out;
+}
+.p8:hover {
+  transform: scale(110%);
+}
