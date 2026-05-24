@@ -86,4 +86,36 @@ function HB() {
   setTimeout(() => {
     wish2.classList.add("active");
   }, 5000);
+
+  wish2.addEventListener("click", () => {
+    wish.classList.remove("active");
+    wish2.classList.remove("active");
+    const container = document.querySelector(".container");
+    container.classList.add("active");
+  });
 }
+
+function flip(item) {
+  if (item.classList.contains("active")) {
+    item.classList.remove("active");
+    return;
+  }
+  item.classList.add("active");
+}
+
+const p1 = document.querySelector(".p1");
+const p2 = document.querySelector(".p2");
+const p3 = document.querySelector(".p3");
+const p4 = document.querySelector(".p4");
+const p5 = document.querySelector(".p5");
+const p6 = document.querySelector(".p6");
+const p7 = document.querySelector(".p7");
+const p8 = document.querySelector(".p8");
+
+const arr = [p1, p2, p3, p4, p5, p6, p7, p8];
+
+arr.forEach((i) => {
+  i.addEventListener("click", () => {
+    flip(i);
+  });
+});
