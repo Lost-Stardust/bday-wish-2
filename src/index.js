@@ -5,6 +5,7 @@ import shine2 from "./assets/shine2.mp3";
 import shine3 from "./assets/shine3.mp3";
 import shine4 from "./assets/shine4.mp3";
 import shine5 from "./assets/shine5.mp3";
+import flipCard from "./assets/flip.mp3";
 
 // function that gives random number between min and max inclusive
 function random(min, max) {
@@ -117,5 +118,7 @@ const arr = [p1, p2, p3, p4, p5, p6, p7, p8];
 arr.forEach((i) => {
   i.addEventListener("click", () => {
     flip(i);
+    const flipSound = new Audio(flipCard);
+    flipSound.play();
   });
 });
