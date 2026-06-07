@@ -83,6 +83,7 @@ heart.addEventListener("click", () => {
 function HB() {
   const ourSong = new Audio(song);
   ourSong.play();
+  ourSong.loop = true;
   const wish = document.querySelector(".wish");
   const wish2 = document.querySelector(".wish2");
   wish.classList.add("active");
